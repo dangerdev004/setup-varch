@@ -6,3 +6,5 @@ flatpak install com.spotify.Client
 flatpak install org.signal.Signal
 flatpak install com.google.AndroidStudio
 sudo systemctl enable --now libvirtd
+sudo snap install g-assist
+sudo snap install video-downloader
