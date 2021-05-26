@@ -33,7 +33,7 @@ systemctl enable reflector.timer
 systemctl enable fstrim.timer
 systemctl enable libvirtd
 systemctl enable firewalld
-systemctl enable acpidf
+systemctl enable acpid
 #Making shreyansh as root and wheel users
 useradd -m shreyansh
 echo shreyansh:Helloarch@12 | chpasswd
