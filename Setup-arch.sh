@@ -32,7 +32,7 @@ systemctl enable tlp # You can comment this command out if you didn't install tl
 systemctl enable reflector.timer
 systemctl enable fstrim.timer
 systemctl enable libvirtd
-systemctl enable firewalld
+systemctl enable --now firewalld
 systemctl enable acpid
 #Making shreyansh as root and wheel users
 useradd -m shreyansh
@@ -60,20 +60,6 @@ sed -i "93s/.//" /etc/pacman.conf
 sed -i "92s/.//" /etc/pacman.conf
 #Reconfiguring pacman
 pacman -Syy
-#Installing AUR helper (yay)
-git clone https://aur.archlinux.org/yay-bin.git
-cd yay-bin
-makepkg -si
-cd
-#Installing zram and timeshift for better performnce and backup
-yay -S zramd timeshift timeshift-autosnap pamac
-#Installing chrome-gnome-shell
-yay -S chrome-gnome-shell
-#Setting up zramd
-sed -i "5s/.//" /etc/default/zramd
-#Using 0.25 part of ram as zramd
-sed -i "5s/1/0.25/" /etc/default/zramd
-systemctl enable --now zramd
 #Doing system upgrade
 pacman -Syu
 #Installing base packages for gnome
