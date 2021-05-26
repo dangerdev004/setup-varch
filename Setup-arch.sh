@@ -10,7 +10,7 @@ echo "arch" >> /etc/hostname
 echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1       localhost" >> /etc/hosts
 echo "127.0.1.1 arch.localdomain arch" >> /etc/hosts
-echo root:Hellocomputer@12my | chpasswd
+echo root:Helloarch@12 | chpasswd
 
 # You can add xorg to the installation packages, I usually add it at the DE or WM install script
 # You can remove the tlp package if you are installing on a desktop or vm
@@ -36,9 +36,10 @@ systemctl enable firewalld
 systemctl enable acpid
 #Making shreyansh as root and wheel users
 useradd -m shreyansh
-echo shreyansh:Hellocomputer@12my | chpasswd
+echo shreyansh:Helloarch@12 | chpasswd
 groupadd libvirt
 usermod -aG libvirt shreyansh
+usermod -aG root shreyansh
 usermod -aG wheel shreyansh
 echo "shreyansh ALL=(ALL) ALL" >> /etc/sudoers.d/shreyansh
 sed -i "82s/.//" /etc/sudoers
