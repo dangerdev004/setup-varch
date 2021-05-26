@@ -12,3 +12,4 @@ sed -i "5s/.//" /etc/default/zramd
 #Using 0.25 part of ram as zramd
 sed -i "5s/1/0.25/" /etc/default/zramd
 systemctl enable --now zramd
+yay -S anydesk google-chrome webapp-manager
