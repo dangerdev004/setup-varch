@@ -49,6 +49,7 @@ sudo sed -i "5s/.//" /etc/default/zramd
 sudo sed -i "5s/1/0.25/" /etc/default/zramd
 sudo systemctl enable --now zramd
 yay -S anydesk google-chrome webapp-manager snapd
+sudo systemctl enable --now snapd
 sudo snap install g-assist --candidate
 sudo snap install video-downloader
 pamac build onedrive-abraunegg
