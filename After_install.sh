@@ -75,11 +75,13 @@ cd dash-to-dock
 git checkout ewlsh/gnome-40
 make
 make install
+cd
 #PopShell
 sudo npm install typescript -g
 git clone https://github.com/pop-os/shell.git
 cd shell
 make local-install
+cd
 #KDE Connect
 wget https://github.com/GSConnect/gnome-shell-extension-gsconnect/releases/download/v46/gsconnect@andyholmes.github.io.zipunzip gsconnect@andyholmes.github.io.zip \ -d /home/shreyansh/.local/share/gnome-shell/extensions/gsconnect@andyholmes.github.io.zip
 gnome-extensions install --force gsconnect@andyholmes.github.io.zip
@@ -87,6 +89,7 @@ gnome-extensions install --force gsconnect@andyholmes.github.io.zip
 git clone https://github.com/stuarthayhurst/alphabetical-grid-extension.git
 cd alphabetical-grid-extension
 ./scripts/create-release.sh -i
+cd
 #Appindicator support
 git clone https://github.com/ubuntu/gnome-shell-extension-appindicator.git
 ln -s $PWD ~/.local/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com
