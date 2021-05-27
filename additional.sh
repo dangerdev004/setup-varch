@@ -41,3 +41,4 @@ yay -S gnome-shell-extension-openweather-git
 gnome-extensions enable openweather-extension@jenslody.de
 onedrive
 onedrive --synchronize
+sudo reboot
