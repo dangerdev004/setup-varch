@@ -32,7 +32,7 @@ systemctl enable tlp # You can comment this command out if you didn't install tl
 systemctl enable reflector.timer
 systemctl enable fstrim.timer
 systemctl enable libvirtd
-systemctl enable --now firewalld
+systemctl enable firewalld
 systemctl enable acpid
 #Making shreyansh as root and wheel users
 useradd -m shreyansh
