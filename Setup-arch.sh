@@ -51,3 +51,8 @@ timedatectl set-ntp true
 hwclock --systohc
 #Enabling the fastest and most updated mirror
 reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
+#Configuring initram for btrfs filesystem
+sed -i '7s/./&btrfs/9' /etc/mkinitcpio.conf
+sed -i '7s/./& i915/14' /etc/mkinitcpio.conf
+sed -i '14s:.:&"/usr/bin/btrfs":10' /etc/mkinitcpio.conf
+mkinitcpio -P linux
