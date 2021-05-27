@@ -30,7 +30,7 @@ sudo firewall-cmd --zone=home --add-service={samba,samba-client,samba-dc} --perm
 sudo firewall-cmd --reload
 systemctl enable --now smb nmb
 #Setting up mariadb
-chattr +C /var/lib/mysql
+sudo chattr +C /var/lib/mysql
 sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 sudo systemctl enable --now mariadb
 #Installing AUR helper (yay)
