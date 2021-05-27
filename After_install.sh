@@ -19,13 +19,12 @@ flatpak install com.google.AndroidStudio
 sudo systemctl enable --now libvirtd
 #Setting up samba services
 git clone https://github.com/ShreyanshShrivastava/smb.conf
-sudo cp -r smb.conf/smb.conf /etc/samba
-testparm
-sudo smbpasswd -a shreyansh
+sudo cp smb.conf/smb.conf /etc/samba
 sudo mkdir /var/lib/samba/usershares
-sudo groupadd -r sambashare
 sudo chown root:sambashare /var/lib/samba/usershares
 sudo chmod 1770 /var/lib/samba/usershares
+sudo smbpasswd -a shreyansh
+sudo groupadd -r sambashare
 sudo gpasswd sambashare -a shreyansh
 sudo firewall-cmd --zone=home --add-service={samba,samba-client,samba-dc} --permanent
 sudo firewall-cmd --reload
