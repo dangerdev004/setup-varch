@@ -1,5 +1,8 @@
 sudo snap install g-assist --candidate
 sudo snap install video-downloader
+flatpak install com.spotify.Client
+flatpak install org.signal.Signal
+flatpak install com.google.AndroidStudio
 #Installing zsh theme powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 sudo sed -i "11s:robbyrussell:powerlevel10k/powerlevel10k:" /home/shreyansh/.zshrc
@@ -18,12 +21,6 @@ git checkout ewlsh/gnome-40
 make
 make install
 cd
-#PopShell
-sudo npm install typescript -g
-git clone https://github.com/pop-os/shell.git
-cd shell
-make local-install
-cd
 #KDE Connect
 wget https://github.com/GSConnect/gnome-shell-extension-gsconnect/releases/download/v46/gsconnect@andyholmes.github.io.zipunzip gsconnect@andyholmes.github.io.zip \ -d /home/shreyansh/.local/share/gnome-shell/extensions/gsconnect@andyholmes.github.io.zip
 gnome-extensions install --force gsconnect@andyholmes.github.io.zip
@@ -39,6 +36,13 @@ gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
 #OpenWeather
 yay -S gnome-shell-extension-openweather-git
 gnome-extensions enable openweather-extension@jenslody.de
+#PopShell
+sudo npm install typescript -g
+git clone https://github.com/pop-os/shell.git
+cd shell
+make local-install
+cd
+sudo reboot
 onedrive
 onedrive --synchronize
 sudo reboot
