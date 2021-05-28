@@ -2,14 +2,14 @@ sudo snap install g-assist --candidate
 sudo snap install video-downloader
 #Installing zsh theme powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-sudo sed -i "18s:robbyrussell:powerlevel10k/powerlevel10k:" /home/shreyansh/.zshrc
+sudo sed -i "11s:robbyrussell:powerlevel10k/powerlevel10k:" /home/shreyansh/.zshrc
 #Adding autosuggestion and syntax highlighting plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-sudo sed -i "80s/)/ /" .zshrc
-sudo sed -i "81 i \ \ zsh-autosuggestions" /home/shreyansh/.zshrc
-sudo sed -i "82 i \ \ zsh-syntax-highlighting" .zshrc
-sudo sed -i "83 i )" .zshrc
+sudo sed -i "73s/)/ /" .zshrc
+sudo sed -i "74 i \ \ zsh-autosuggestions" /home/shreyansh/.zshrc
+sudo sed -i "75 i \ \ zsh-syntax-highlighting" .zshrc
+sudo sed -i "76 i )" .zshrc
 #Installing gnome shell extensions
 #DashToDock
 git clone https://github.com/ewlsh/dash-to-dock/
