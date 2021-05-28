@@ -32,17 +32,12 @@ cd
 #Appindicator support
 git clone https://github.com/ubuntu/gnome-shell-extension-appindicator.git
 ln -s $PWD ~/.local/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com
-gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
+gnome-extensions install -force appindicatorsupport@rgcjonas.gmail.com
 #OpenWeather
 yay -S gnome-shell-extension-openweather-git
-gnome-extensions enable openweather-extension@jenslody.de
 #PopShell
 sudo npm install typescript -g
 git clone https://github.com/pop-os/shell.git
 cd shell
 make local-install
 cd
-sudo reboot
-onedrive
-onedrive --synchronize
-sudo reboot
