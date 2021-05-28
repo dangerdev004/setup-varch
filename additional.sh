@@ -21,20 +21,11 @@ git checkout ewlsh/gnome-40
 make
 make install
 cd
-#KDE Connect
-wget https://github.com/GSConnect/gnome-shell-extension-gsconnect/releases/download/v46/gsconnect@andyholmes.github.io.zipunzip gsconnect@andyholmes.github.io.zip \ -d /home/shreyansh/.local/share/gnome-shell/extensions/gsconnect@andyholmes.github.io.zip
-gnome-extensions install --force gsconnect@andyholmes.github.io.zip
 #Alphabateical App Grid
 git clone https://github.com/stuarthayhurst/alphabetical-grid-extension.git
 cd alphabetical-grid-extension
 ./scripts/create-release.sh -i
 cd
-#Appindicator support
-git clone https://github.com/ubuntu/gnome-shell-extension-appindicator.git
-ln -s $PWD ~/.local/share/gnome-shell/extensions/appindicatorsupport@rgcjonas.gmail.com
-gnome-extensions install -force appindicatorsupport@rgcjonas.gmail.com
-#OpenWeather
-yay -S gnome-shell-extension-openweather-git
 #PopShell
 sudo npm install typescript -g
 git clone https://github.com/pop-os/shell.git
