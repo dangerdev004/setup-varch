@@ -1,6 +1,6 @@
-# Setup-for-arch-manjaro-
-setup script for programs available on arch only watchout 
+# Setup for vanilla arch linux
+Setup script to make you up and running on vanilla arch linux from arch-chroot to a DE with necessary softwares
 
-Thanks to Ermanno Ferrari for helping 
+Thanks to Ermanno Ferrari for helping
 Parts of this script are taken from his gitlab public script
 His gitlab repo : https://gitlab.com/eflinux
