@@ -55,3 +55,4 @@ sudo pacman -S zsh
 sudo chsh -s /usr/bin/zsh
 #Installing ohmyzsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+echo "Now run the last script"
