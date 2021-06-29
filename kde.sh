@@ -16,7 +16,7 @@ sudo pacman -Sy samba mariadb gcc krita libreoffice-fresh jdk-openjdk jre-openjd
 sudo systemctl enable --now libvirtd
 
 #Setting up samba services
-git clone https://github.com/ShreyanshShrivastava/smb.conf
+git clone https://github.com/dangerdev004/smb.conf
 sudo cp smb.conf/smb.conf /etc/samba
 sudo mkdir /var/lib/samba/usershares
 sudo chown root:sambashare /var/lib/samba/usershares
