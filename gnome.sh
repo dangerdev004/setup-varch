@@ -15,7 +15,7 @@ sudo pacman -S gdm gnome firefox gnome-tweaks simplescreenrecorder arc-gtk-theme
 sudo pacman -Sy samba mariadb gcc krita libreoffice-fresh jdk-openjdk jre-openjdk a52dec faac faad2 flac jasper lame libdca libdv libmad libmpeg2 libtheora libvorbis libxv opus wavpack x264 xvidcore gimp android-file-transfer obs-studio virtualbox openshot gnome-chess gnuchess gnome-weather telegram-desktop steam blender wine wine-mono wine-gecko kdenlive neofetch screenfetch nautilus-share virt-manager qemu vde2 ebtables dnsmasq bridge-utils openbsd-netcat edk2-ovmf npm atom lollypop rhythmbox sassc
 sudo systemctl enable --now libvirtd
 #Setting up samba services
-git clone https://github.com/ShreyanshShrivastava/smb.conf
+git clone https://github.com/dangerdev004/smb.conf
 sudo cp smb.conf/smb.conf /etc/samba
 sudo mkdir /var/lib/samba/usershares
 sudo chown root:sambashare /var/lib/samba/usershares
