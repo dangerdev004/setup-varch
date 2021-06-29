@@ -1,26 +1,28 @@
 # Setup for vanilla arch linux
 Setup script to make you up and running on vanilla arch linux from arch-chroot to a DE with necessary software.
 
-Please change your Timezone Keyboard-layout locales USERNAME and PASSWORD in the script before installing.
-
-Please see the script before installing.Remove packages that you don't need.
-
 Thanks to Ermanno Ferrari for helping.
 Parts of this script are taken from his gitlab public script.
 His gitlab repo : https://gitlab.com/eflinux
 
-# Instructions
+# IMPORTANT
+In this repository you will find packages-scripts for the base install of Arch Linux and the Gnome, KDE, Cinnamon and Xfce desktop environments. More to come for Windows Managers soon.
+Modify the packages to your liking, make the script executable with chmod +x scriptname and then run with ./scriptname.
+A script for the base install on MBR/Legacy will be available soon.
+Remember that the first part of the Arch Linux install is manual, that is you will have to partition, format and mount the disk yourself. Install the base packages and make sure to inlcude git so that you can clone the repository in chroot.
 
-1.In arch-chroot clone the repo.
+# A small summary:
 
-2.Make changes in base.sh and run it.
+1. If needed, load your keymap
+2. Refresh the servers with pacman -Syy
+3. Partition the disk
+4. Format the partitions
+5. Mount the partitions
+6. Install the base packages into /mnt (pacstrap /mnt base linux linux-firmware git vim intel-ucode (or amd-ucode))
+7. Generate the FSTAB file with genfstab -U /mnt >> /mnt/etc/FSTAB
+8. Chroot in with arch-chroot /mnt
+9. Download the git repository with git clone https://github.com/dangerdev004/setup-varch.git
+10. cd setup-varch
+11. chmod +x base.sh
+12. run with ./base.sh
 
-3.Reboot
-
-4.Choose a DE (Kde,gnome.xfce,cinnamon) and DE.sh example: gnome.sh
-
-5.Reboot
-
-6.Run the addition_DE.sh replace the DE with your installed DesktopEnvironment
-
-7.Reboot
