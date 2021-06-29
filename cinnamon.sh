@@ -31,7 +31,7 @@ sudo chattr +C /var/lib/mysql
 sudo mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 sudo systemctl enable --now mariadb
 #Enabling gdm service on startup
-sudo systemctl enable gdm
+sudo systemctl enable lightdm
 #Installing AUR helper (yay)
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -48,7 +48,6 @@ sudo sed -i "5s/1.0/0.25/" /etc/default/zramd
 sudo systemctl enable --now zramd
 yay -S anydesk google-chrome webapp-manager snapd
 sudo systemctl enable --now snapd
-sudo systemctl enable gdm
 pamac build onedrive-abraunegg
 #Installing zsh shell with powerlevel10k
 sudo pacman -S zsh
