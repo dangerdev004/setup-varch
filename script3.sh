@@ -1,4 +1,3 @@
-sudo snap install g-assist --candidate
 sudo snap install video-downloader
 flatpak install com.spotify.Client
 flatpak install org.signal.Signal
