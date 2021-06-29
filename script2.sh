@@ -4,7 +4,7 @@ sudo firewall-cmd --add-port=1025-65535/udp --permanent
 sudo firewall-cmd --reload
 #Enabling multilib database for pacman
 sudo sed -i "93s/.//" /etc/pacman.conf
-sudo sed -i "92s/.//" /etc/pacman.conf
+sudo sed -i "94s/.//" /etc/pacman.conf
 #Reconfiguring pacman
 sudo pacman -Syy
 #Doing system upgrade
