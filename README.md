@@ -9,7 +9,7 @@ Thanks to Ermanno Ferrari for helping.
 Parts of this script are taken from his gitlab public script.
 His gitlab repo : https://gitlab.com/eflinux
 
-#Instructions
+# Instructions
 
 1.In arch-chroot clone the repo.
 
