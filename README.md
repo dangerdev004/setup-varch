@@ -25,4 +25,6 @@ Remember that the first part of the Arch Linux install is manual, that is you wi
 10. cd setup-varch
 11. chmod +x base.sh
 12. run with ./base.sh
-
+13. then first run the DE.sh and then addition_DE.sh
+where DE is your required DE :).
+For more info: https://wiki.archlinux.org/title/Installation_guide
