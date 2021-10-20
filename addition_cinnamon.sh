@@ -1,4 +1,4 @@
-sudo snap install video-downloader
+flatpak install com.github.unrud.VideoDownloader
 flatpak install com.spotify.Client
 flatpak install org.signal.Signal
 flatpak install com.google.AndroidStudio

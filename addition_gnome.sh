@@ -1,7 +1,7 @@
-sudo snap install video-downloader
+flatpak install com.github.unrud.VideoDownloader
 flatpak install com.spotify.Client
 flatpak install org.signal.Signal
-flatpak install com.google.AndroidStudio
+#flatpak install com.google.AndroidStudio
 #Installing zsh theme powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 sudo sed -i "11s:robbyrussell:powerlevel10k/powerlevel10k:" /home/shreyansh/.zshrc
