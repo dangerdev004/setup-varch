@@ -1,7 +1,3 @@
-#Setting up firewalld
-sudo firewall-cmd --add-port=1025-65535/tcp --permanent
-sudo firewall-cmd --add-port=1025-65535/udp --permanent
-sudo firewall-cmd --reload
 #Enabling multilib database for pacman
 sudo sed -i "93s/.//" /etc/pacman.conf
 sudo sed -i "94s/.//" /etc/pacman.conf
@@ -23,8 +19,6 @@ sudo chmod 1770 /var/lib/samba/usershares
 sudo smbpasswd -a Username
 sudo groupadd -r sambashare
 sudo gpasswd sambashare -a Username
-sudo firewall-cmd --zone=home --add-service={samba,samba-client,samba-dc} --permanent
-sudo firewall-cmd --reload
 systemctl enable --now smb nmb
 #Setting up mariadb
 sudo chattr +C /var/lib/mysql
